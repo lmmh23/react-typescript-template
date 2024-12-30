@@ -1,4 +1,5 @@
 import js from "@eslint/js"
+import vitest from "@vitest/eslint-plugin"
 import eslintConfigPrettier from "eslint-config-prettier"
 import jestDom from "eslint-plugin-jest-dom"
 import jsxA11y from "eslint-plugin-jsx-a11y"
@@ -19,6 +20,7 @@ export default tseslint.config(
     ...jestDom.configs["flat/recommended"],
     ...testingLibrary.configs["flat/react"],
     ...jsxA11y.flatConfigs.recommended,
+    ...vitest.configs.recommended,
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,

@@ -45,6 +45,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.5.0
         version: 3.7.2(vite@6.0.3(@types/node@22.10.2))
+      '@vitest/eslint-plugin':
+        specifier: ^1.1.21
+        version: 1.1.21(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(jsdom@25.0.1))
       eslint:
         specifier: ^9.15.0
         version: 9.17.0
@@ -807,6 +810,19 @@ packages:
     resolution: {integrity: sha512-y0byko2b2tSVVf5Gpng1eEhX1OvPC7x8yns1Fx8jDzlJp4LS6CMkCPfLw47cjyoMrshQDoQw4qcgjsU9VvlCew==}
     peerDependencies:
       vite: ^4 || ^5 || ^6
+
+  '@vitest/eslint-plugin@1.1.21':
+    resolution: {integrity: sha512-gIpmafm7WSwXGHq413q3fC26+nER5mQtM7Lqi7UusY5bSzeQIJmViC+G6CfPo06U0CfgZ+rt7FPaskpkZ2f6gg==}
+    peerDependencies:
+      '@typescript-eslint/utils': '>= 8.0'
+      eslint: '>= 8.57.0'
+      typescript: '>= 5.0.0'
+      vitest: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      vitest:
+        optional: true
 
   '@vitest/expect@2.1.8':
     resolution: {integrity: sha512-8ytZ/fFHq2g4PJVAtDX57mayemKgDR6X3Oa2Foro+EygiOJHUXhCqBAAKQYYajZpFoIfvBCF1j6R6IYRSIUFuw==}
@@ -2777,6 +2793,14 @@ snapshots:
       vite: 6.0.3(@types/node@22.10.2)
     transitivePeerDependencies:
       - '@swc/helpers'
+
+  '@vitest/eslint-plugin@1.1.21(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@22.10.2)(jsdom@25.0.1))':
+    dependencies:
+      '@typescript-eslint/utils': 8.18.1(eslint@9.17.0)(typescript@5.6.3)
+      eslint: 9.17.0
+    optionalDependencies:
+      typescript: 5.6.3
+      vitest: 2.1.8(@types/node@22.10.2)(jsdom@25.0.1)
 
   '@vitest/expect@2.1.8':
     dependencies:
